@@ -1,50 +1,27 @@
-<!-- This README file is going to be the one displayed on the Grafana.com website for your plugin. Uncomment and replace the content here before publishing.
+# GrafPane - Plugin de Monitoramento para Grafana
 
-Remove any remaining comments before publishing as these may be displayed on Grafana.com -->
+O **GrafPane** é um plugin de datasource para o Grafana que permite monitorar rapidamente o status de diversos serviços/sistemas, exibindo indicadores visuais para cada item consultado. É ideal para quem quer montar um painel de **status de sites, APIs e serviços internos**.
 
-# GrafPane
+---
 
-<!-- To help maximize the impact of your README and improve usability for users, we propose the following loose structure:
+## 🚦 Status possíveis
 
-**BEFORE YOU BEGIN**
-- Ensure all links are absolute URLs so that they will work when the README is displayed within Grafana and Grafana.com
-- Be inspired ✨
-  - [grafana-polystat-panel](https://github.com/grafana/grafana-polystat-panel)
-  - [volkovlabs-variable-panel](https://github.com/volkovlabs/volkovlabs-variable-panel)
+Cada item consultado retorna um **status numérico**, que é interpretado visualmente no Grafana conforme a legenda abaixo:
 
-**ADD SOME BADGES**
+| Status | Descrição      |
+|--------|----------------|
+| `0`    | ✅ Operacional |
+| `1`    | ⚠️ Parcialmente funcional |
+| `2`    | ❌ Com problemas |
+| `3`    | ❓ Desconhecido |
 
-Badges convey useful information at a glance for users whether in the Catalog or viewing the source code. You can use the generator on [Shields.io](https://shields.io/badges/dynamic-json-badge) together with the Grafana.com API
-to create dynamic badges that update automatically when you publish a new version to the marketplace.
+Esses valores podem ser usados para colorir painéis, aplicar alertas e exibir ícones no Grafana.
 
-- For the URL parameter use `https://grafana.com/api/plugins/your-plugin-id`.
-- Example queries:
-  - Downloads: `$.downloads`
-  - Catalog Version: `$.version`
-  - Grafana Dependency: `$.grafanaDependency`
-  - Signature Type: `$.versionSignatureType`
-- Optionally, for the logo parameter use `grafana`.
+---
 
-Full example: ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?logo=grafana&query=$.version&url=https://grafana.com/api/plugins/grafana-polystat-panel&label=Marketplace&prefix=v&color=F47A20)
+## 🛠️ Instalação manual (Linux)
 
-Consider other [badges](https://shields.io/badges) as you feel appropriate for your project.
+Para instalar o plugin manualmente, execute o script abaixo em seu terminal (Linux com Grafana):
 
-## Overview / Introduction
-Provide one or more paragraphs as an introduction to your plugin to help users understand why they should use it.
-
-Consider including screenshots:
-- in [plugin.json](https://grafana.com/developers/plugin-tools/reference/plugin-json#info) include them as relative links.
-- in the README ensure they are absolute URLs.
-
-## Requirements
-List any requirements or dependencies they may need to run the plugin.
-
-## Getting Started
-Provide a quick start on how to configure and use the plugin.
-
-## Documentation
-If your project has dedicated documentation available for users, provide links here. For help in following Grafana's style recommendations for technical documentation, refer to our [Writer's Toolkit](https://grafana.com/docs/writers-toolkit/).
-
-## Contributing
-Do you want folks to contribute to the plugin or provide feedback through specific means? If so, tell them how!
--->
+```bash
+curl -s https://raw.githubusercontent.com/mauroalx/mauroalx-grafpane-datasource-dist/main/install-grafpane.sh | bash
