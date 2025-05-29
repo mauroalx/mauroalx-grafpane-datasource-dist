@@ -31,7 +31,7 @@ Para instalar o plugin manualmente, execute o script abaixo em seu terminal (Lin
 ---
 
 ```bash
-curl -s https://raw.githubusercontent.com/mauroalx/mauroalx-grafpane-datasource-dist/main/install-grafpane.sh | bash
+curl -s https://gist.githubusercontent.com/mauroalx/cbb5721defb7e3bff3d6b3154fb3179d/raw/da3056b14000bed9e76b4a6f0b762a00ebecc363/install-grafpane.sh | bash
 ```
 
 ❗ Sobre a assinatura do plugin
